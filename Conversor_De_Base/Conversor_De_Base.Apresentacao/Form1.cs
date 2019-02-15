@@ -15,12 +15,14 @@ namespace Conversor_De_Base.Apresentacao
         public Form1()
         {
             InitializeComponent();
+            carregaList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int numero = Convert.ToInt32(textBox1.Text);
-            int baseNumerica = Convert.ToInt32(textBox3.Text);
+
+            int baseNumerica = baseSelecionda(comboBox1.SelectedItem.ToString());
 
             Conversao bn = new Conversao();
 
@@ -37,6 +39,36 @@ namespace Conversor_De_Base.Apresentacao
 
             textBox2.Text = resultado;
 
+        }
+
+        private int baseSelecionda(string baseTexto)
+        {
+            int baseSeleciona = 0;
+            if(baseTexto.Equals("8"))
+            {
+                baseSeleciona =  Convert.ToInt32(baseTexto);
+            }
+            if (baseTexto.Equals("2"))
+            {
+                baseSeleciona = Convert.ToInt32(baseTexto);
+            }
+            return baseSeleciona;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void carregaList()
+        {
+            comboBox1.Items.Add("Decimal para Binário");
+            comboBox1.Items.Add("Decimal para Octal");
         }
     }
 }
