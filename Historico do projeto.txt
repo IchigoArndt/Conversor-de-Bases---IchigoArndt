@@ -1,0 +1,11 @@
+Descrição:
+Conversor entre bases 
+
+Disciplina:
+Calculo Numerico Simbolico
+
+Desenvolvedor:
+IchigoArndt
+
+Data de Inicio do Projeto: 14/02/2019 
+Horas: 20:00 pm
