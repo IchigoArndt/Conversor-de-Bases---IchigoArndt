@@ -1,0 +1,15 @@
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Apresentacao.exe.config
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Apresentacao.exe
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Apresentacao.pdb
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.Form1.resources
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.Properties.Resources.resources
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.csproj.GenerateResource.cache
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.exe
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.pdb
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Dominio.dll
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Dominio.pdb
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.csproj.CopyComplete
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Aplicacao.dll
+C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Semestre_Afonso.Aplicacao.pdb

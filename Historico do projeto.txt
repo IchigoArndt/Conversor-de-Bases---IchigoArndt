@@ -9,3 +9,5 @@ IchigoArndt
 
 Data de Inicio do Projeto: 14/02/2019 
 Horas: 20:00 pm
+
+Data de Finalização do Projeto: 16/02/2019
