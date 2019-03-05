@@ -30,6 +30,8 @@ namespace Semestre_Afonso.Apresentacao
             cmb_conversao.Items.Add("Decimal para Binário");
             cmb_conversao.Items.Add("Decimal para Octal");
             cmb_conversao.Items.Add("Decimal para Hexadecimal");
+            cmb_conversao.Items.Add("Texto para Binario");
+            cmb_conversao.Items.Add("Binario para Decimal");
         }
 
         private void carregaBarra(string result)
@@ -63,20 +65,31 @@ namespace Semestre_Afonso.Apresentacao
         private void btn_conversao_Click(object sender, EventArgs e)
         {
             Servico sv = new Servico();
-            if (sv.validacao(txt_BaseO.Text))
+
+            if (true)
             {
-                
-                string baseSelecionada = cmb_conversao.SelectedItem.ToString();
-
+                int baseConversaoSelecionada = sv.BaseNumerica(cmb_conversao.SelectedItem.ToString());
                 string numeroConversao = txt_BaseO.Text;
-
-                string resultado = sv.realizaConversao(baseSelecionada, numeroConversao);
-
+                string resultado = string.Empty;
+                if(baseConversaoSelecionada == 2 || baseConversaoSelecionada == 8 || baseConversaoSelecionada == 16)
+                {
+                    resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                }
+                else
+                {
+                    switch (baseConversaoSelecionada)
+                    {
+                      case 4:
+                         {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada,sv.ConversaoLista(numeroConversao),null);
+                                break;
+                         }
+                    }
+                }
                 carregaBarra(resultado);
-
                 txt_BaseN.Text = resultado;
-
-            }else
+            }
+            else
             {
                 txt_BaseO.Text = "";
                 MessageBox.Show("Por favor Verifique o tamanho do numero informado \n Verfique se foi usado apenas letras");

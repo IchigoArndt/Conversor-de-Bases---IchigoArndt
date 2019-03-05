@@ -34,6 +34,18 @@ namespace Semestre_Afonso.Dominio
 
             return binario.ToList();
         }
+        //Metodo que faz a conversão de letra em numero
+        public string conversaoASCII(string texto, int baseNumerica)
+        {
+            byte[] codigosAscii = System.Text.Encoding.ASCII.GetBytes(texto);
+
+            int numeroLetra = 0;
+
+            for (int i = 0; i < codigosAscii.Length; ++i)
+                numeroLetra += Convert.ToInt32(codigosAscii[i]);
+
+            return numeroLetra.ToString();
+        }
         //Retorna o resultado das conversões de decimal para binario e de decimal para octal
         public string resultadoConversao(List<int> conversao)
         {
@@ -89,6 +101,31 @@ namespace Semestre_Afonso.Dominio
                 }
             }
 
+            return resultado;
+        }
+        //Converte e retorna a conversão de Binário para Decimal
+        public string resultadoConversaoBinarioDecimal(List<int>binario)
+        {
+            List<int> resultadoExpo = new List<int>();
+            List<int> resultadoMulti = new List<int>();
+            int soma = 0;
+            string resultado = string.Empty;
+
+            for (int i = 1; i <= binario.Count; i++)
+            {
+                resultadoExpo.Add(Convert.ToInt32(Math.Pow(2,i)));
+            }
+
+            for (int i = 0; i < resultadoExpo.Count; i++)
+            {
+                resultadoMulti.Add(resultadoExpo[i] * binario[i]);
+            }
+
+            foreach (var item in resultadoMulti)
+            {
+                soma += item;
+            }
+            resultado = soma.ToString();
             return resultado;
         }
     }
