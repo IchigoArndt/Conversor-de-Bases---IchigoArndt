@@ -14,7 +14,7 @@ namespace Semestre_Afonso.Dominio
         {
             bool result = false;
 
-            if(!string.IsNullOrEmpty(ApenasNumeros(texto)) && TamanhoNumerico(texto))
+            if(!string.IsNullOrEmpty(ApenasNumeros(texto)))
             {
                 result = true;
             }
@@ -29,14 +29,5 @@ namespace Semestre_Afonso.Dominio
             resultString = regexObj.Replace(texto, "");
             return resultString;
         }
-//Valida se o texto informado pelo usario tem o tamanho estaelecido (min e max)
-        private bool TamanhoNumerico(string texto)
-        {
-            if (texto.Length <= 6 && texto.Length >= 3)
-                return true;
-            else
-                return false;
-        }
-
     }
 }

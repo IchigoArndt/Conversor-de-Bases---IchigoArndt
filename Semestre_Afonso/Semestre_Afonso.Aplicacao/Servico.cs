@@ -24,7 +24,10 @@ namespace Semestre_Afonso.Aplicacao
             {
                 if (baseDesejada == 2 || baseDesejada == 8 || baseDesejada == 16)
                     resultado = realizaConversaoDecimal(baseDesejada, numeroDesejado);
-            }else if(numeroDesejado == null && NumerosDesejados != null)
+                else if(baseDesejada == 0)
+                    resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+            }
+            else if(numeroDesejado == null && NumerosDesejados != null)
             {
                 switch (baseDesejada)
                 {
@@ -33,6 +36,11 @@ namespace Semestre_Afonso.Aplicacao
                      resultado = realizaConversaoBinarioDecimal(NumerosDesejados);
                      break;
                    }
+                    case 0:
+                        {
+                            resultado = realizaConversaoASCII(numeroDesejado,baseDesejada);
+                            break;
+                        }
                 }
             }
 
@@ -69,6 +77,7 @@ namespace Semestre_Afonso.Aplicacao
              * 18 = para Conversão de Octal em Decimal
              * 16 = para Conversão de Decimal em Hexadecimal
              * 32 = para Conversão de Hexadecimal em Decimal
+             * 0 = Para Conversão de Texto em Binario
              */
             switch (texto)
             {
@@ -104,7 +113,7 @@ namespace Semestre_Afonso.Aplicacao
                         baseParaConversao = 0;
                         break;
                     }
-                    #endregion
+                #endregion
             }
             return baseParaConversao;
         }
@@ -123,6 +132,10 @@ namespace Semestre_Afonso.Aplicacao
             }
             return binarioNumerico;
         }
-
+        //Realiza a conversão entre de um Texto para Binario
+        private string realizaConversaoASCII(string numeroConverter, int numeroBaseConversao)
+        {
+            return cv.conversaoASCII(numeroConverter, numeroBaseConversao);
+        }
     }
 }

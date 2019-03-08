@@ -40,11 +40,21 @@ namespace Semestre_Afonso.Dominio
             byte[] codigosAscii = System.Text.Encoding.ASCII.GetBytes(texto);
 
             int numeroLetra = 0;
+            string resultado = string.Empty;
 
             for (int i = 0; i < codigosAscii.Length; ++i)
                 numeroLetra += Convert.ToInt32(codigosAscii[i]);
 
-            return numeroLetra.ToString();
+            switch (baseNumerica)
+            {
+                case 0:
+                    {
+                        resultado = resultadoConversao(conversao(numeroLetra, 2));
+                        break;
+                    }
+            }
+
+            return resultado.ToString();
         }
         //Retorna o resultado das conversões de decimal para binario e de decimal para octal
         public string resultadoConversao(List<int> conversao)
