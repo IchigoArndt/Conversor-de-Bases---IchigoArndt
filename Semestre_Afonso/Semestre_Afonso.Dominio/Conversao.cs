@@ -8,6 +8,12 @@ namespace Semestre_Afonso.Dominio
 {
    public class Conversao
     {
+        #region Bases
+        private  int  Binario = 2;
+        private  int  Hexadecimal = 16;
+        private  int  Octal = 8;
+        #endregion
+
         //Metodo que faz a conversão de decimal, para octal,binario e hexadecimal
         public List<int> conversao(int numero , int baseNumerica)
         {
@@ -37,6 +43,7 @@ namespace Semestre_Afonso.Dominio
         //Metodo que faz a conversão de letra em numero
         public string conversaoASCII(string texto, int baseNumerica)
         {
+           
             byte[] codigosAscii = System.Text.Encoding.ASCII.GetBytes(texto);
 
             int numeroLetra = 0;
@@ -49,7 +56,22 @@ namespace Semestre_Afonso.Dominio
             {
                 case 0:
                     {
-                        resultado = resultadoConversao(conversao(numeroLetra, 2));
+                        resultado = resultadoConversao(conversao(numeroLetra, Binario));
+                        break;
+                    }
+                case -1:
+                    {
+                        resultado = resultadoConversao(conversao(numeroLetra, Octal));
+                        break;
+                    }
+                case -2:
+                    {
+                        resultado = resultadoConversaoHexa(conversao(numeroLetra, Hexadecimal));
+                        break;
+                    }
+                case -3:
+                    {
+                        resultado = numeroLetra.ToString();
                         break;
                     }
             }

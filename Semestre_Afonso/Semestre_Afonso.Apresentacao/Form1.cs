@@ -33,6 +33,9 @@ namespace Semestre_Afonso.Apresentacao
             cmb_conversao.Items.Add("Decimal para Hexadecimal");
             //Conversões de Texto
             cmb_conversao.Items.Add("Texto para Binario");
+            cmb_conversao.Items.Add("Texto para Octal");
+            cmb_conversao.Items.Add("Texto para Hexadecimal");
+            cmb_conversao.Items.Add("Texto para Decimal");
         }
 
         private void carregaBarra(string result)
@@ -74,7 +77,7 @@ namespace Semestre_Afonso.Apresentacao
 
             int baseConversaoSelecionada = sv.BaseNumerica(cmb_conversao.SelectedItem.ToString());
             string numeroConversao = txt_BaseO.Text;
-            if (validacao.Validacaos(numeroConversao) || baseConversaoSelecionada == 0)
+            if (validacao.Validacaos(numeroConversao) || baseConversaoSelecionada >= -3 && baseConversaoSelecionada <= 0)
             {
                 string resultado = string.Empty;
                 if (baseConversaoSelecionada == 2 || baseConversaoSelecionada == 8 || baseConversaoSelecionada == 16)
@@ -91,6 +94,21 @@ namespace Semestre_Afonso.Apresentacao
                                 break;
                             }
                         case 0:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada,null,numeroConversao);
+                                break;
+                            }
+                        case -1:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                        case -2:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                        case -3:
                             {
                                 resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
                                 break;

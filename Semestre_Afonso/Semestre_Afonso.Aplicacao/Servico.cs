@@ -24,23 +24,40 @@ namespace Semestre_Afonso.Aplicacao
             {
                 if (baseDesejada == 2 || baseDesejada == 8 || baseDesejada == 16)
                     resultado = realizaConversaoDecimal(baseDesejada, numeroDesejado);
-                else if(baseDesejada == 0)
-                    resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+                //Coloca-se o switch para nao ficar muito if 
+                switch (baseDesejada)
+                {
+                    case 0:
+                        {
+                            resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+                            break;
+                        }
+                    case -1:
+                        {
+                            resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+                            break;
+                        }
+                    case -2:
+                        {
+                            resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+                            break;
+                        }
+                    case -3:
+                        {
+                            resultado = realizaConversaoASCII(numeroDesejado, baseDesejada);
+                            break;
+                        }
+                }
             }
             else if(numeroDesejado == null && NumerosDesejados != null)
             {
                 switch (baseDesejada)
                 {
-                   case 4:
+                   case  4:
                    {
                      resultado = realizaConversaoBinarioDecimal(NumerosDesejados);
                      break;
                    }
-                    case 0:
-                        {
-                            resultado = realizaConversaoASCII(numeroDesejado,baseDesejada);
-                            break;
-                        }
                 }
             }
 
@@ -71,13 +88,16 @@ namespace Semestre_Afonso.Aplicacao
             int baseParaConversao = 0;
 
             /* Retorna:
-             * 2 = para Conversão de Decimal em Binario
-             * 4 = para Conversão de Binario em Decimal
-             * 8 =  para Conversão de Decimal em Octal
+             * 2  = Para Conversão de Decimal em Binario
+             * 4  = Para Conversão de Binario em Decimal
+             * 8  = Para Conversão de Decimal em Octal
              * 18 = para Conversão de Octal em Decimal
              * 16 = para Conversão de Decimal em Hexadecimal
-             * 32 = para Conversão de Hexadecimal em Decimal
-             * 0 = Para Conversão de Texto em Binario
+             * 32 = Para Conversão de Hexadecimal em Decimal
+             * 0  = Para Conversão de Texto em Binario
+             * -1 = Para Conversão de Texto em Octal
+             * -2 = Para Conversão de Texto em Hexadecimal
+             * -3 = Para Conversão de Texto em Decimal
              */
             switch (texto)
             {
@@ -113,6 +133,21 @@ namespace Semestre_Afonso.Aplicacao
                         baseParaConversao = 0;
                         break;
                     }
+                case "Texto para Octal":
+                    {
+                        baseParaConversao = -1;
+                        break;
+                    }
+                case "Texto para Hexadecimal":
+                    {
+                        baseParaConversao = -2;
+                        break;
+                    }
+                case "Texto para Decimal":
+                    {
+                        baseParaConversao = -3;
+                        break;
+                    }
                 #endregion
             }
             return baseParaConversao;
@@ -124,12 +159,14 @@ namespace Semestre_Afonso.Aplicacao
             List<int> binarioNumerico = new List<int>();
             foreach (var item in numeroBinario.ToList())
             {
-                binario.Add(item.ToString());
+                binarioNumerico.Add(Convert.ToInt32(item));
             }
-            for (int i = 0; i < binario.Count; i++)
+            /*for (int i = 0; i < binario.Count; i++)
             {
-                binarioNumerico.Add(Convert.ToInt32(binario[i]));
+                int aux_conversao = Convert.ToInt32()
+                binarioNumerico.Add(aux_conversao);
             }
+            */
             return binarioNumerico;
         }
         //Realiza a conversão entre de um Texto para Binario
