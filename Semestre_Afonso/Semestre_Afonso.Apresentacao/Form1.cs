@@ -82,7 +82,7 @@ namespace Semestre_Afonso.Apresentacao
 
             int baseConversaoSelecionada = sv.BaseNumerica(cmb_conversao.SelectedItem.ToString());
             string numeroConversao = txt_BaseO.Text;
-            if (validacao.Validacaos(numeroConversao) || baseConversaoSelecionada >= -3 && baseConversaoSelecionada <= 0)
+            if (validacao.Validacaos(numeroConversao.ToList()) || baseConversaoSelecionada >= -3 && baseConversaoSelecionada <= 0)
             {
                 string resultado = string.Empty;
                 if (baseConversaoSelecionada == 2 || baseConversaoSelecionada == 8 || baseConversaoSelecionada == 16)

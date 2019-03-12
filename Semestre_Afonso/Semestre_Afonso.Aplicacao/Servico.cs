@@ -12,10 +12,11 @@ namespace Semestre_Afonso.Aplicacao
         Validacao cl = new Validacao();
         Conversao cv = new Conversao();
         //Faz a validação dos campos
-        public bool validacao(string texto)
+        /*public bool validacao(string texto)
         {
             return cl.Validacaos(texto);
         }
+        */
         //Verifica Base e realiza a conversão adequada
         public string organizaConversao(int baseDesejada,List<int>NumerosDesejados,string numeroDesejado)
         {

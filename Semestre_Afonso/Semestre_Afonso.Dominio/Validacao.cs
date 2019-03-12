@@ -10,7 +10,7 @@ namespace Semestre_Afonso.Dominio
     public class Validacao
     {
 
-        public bool Validacaos(string texto)
+        public bool Validacaos(List<char>texto)
         {
             bool result = false;
 
@@ -22,11 +22,18 @@ namespace Semestre_Afonso.Dominio
             return result;
         }
 //Valida se o texto informado pelo usario é somente Números
-        private string ApenasNumeros(string texto)
+        private string ApenasNumeros(List<char> texto)
         {
             string resultString = string.Empty;
             Regex regexObj = new Regex(@"[^\d]");
-            resultString = regexObj.Replace(texto, "");
+            for (int i = 0; i < texto.Count; i++)
+            {
+                resultString = regexObj.Replace(texto[i].ToString(), "");
+                if(resultString.Equals(""))
+                {
+                    break;
+                }
+            }
             return resultString;
         }
     }
