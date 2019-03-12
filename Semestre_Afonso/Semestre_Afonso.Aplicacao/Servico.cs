@@ -9,13 +9,19 @@ namespace Semestre_Afonso.Aplicacao
 {
     public class Servico
     {
+        #region Variaveis Globais
         Validacao cl = new Validacao();
         Conversao cv = new Conversao();
+        #endregion
+
+        #region Validaçoes Gerais 
         public bool validacao(string texto)
         {
             return cl.Validacaos(texto);
         }
+        #endregion
 
+        #region Decimal para todas as bases
         public string realizaConversao(string texto,string Numero)
         {
             int NumeroBase = BaseNumerica(texto);
@@ -31,7 +37,25 @@ namespace Semestre_Afonso.Aplicacao
 
             return resultadoConversao;
         }
+        #endregion
 
+        #region Converte Letra para numero via tabela ASCII
+        public string realizaConversaoLetra(string texto,string numero)
+        {
+
+            int NumeroConvertido = Convert.ToInt32(numero);
+
+            string resultadoConversao = "";
+
+            resultadoConversao = cv.conversaoASCII(texto, NumeroConvertido);
+
+            return resultadoConversao;
+
+            return null;
+        }
+        #endregion
+
+        #region Converte o combo box para a base selecionada
         private int BaseNumerica(string texto)
         {        
             int Numerico = 0;
@@ -50,6 +74,31 @@ namespace Semestre_Afonso.Aplicacao
             }
             return Numerico;
         }
+        #endregion
 
+        #region Converte de alguma base para Decimal
+
+        public string baseDecimal(string texto,string baseNumerica)
+        {
+            List<int> binario = new List<int>();
+            List<char> textoConvert = new List<char>();
+            texto.Reverse();
+            textoConvert = texto.ToList();
+
+            string resultado = string.Empty;
+
+            for (int i = 0; i < texto.Count(); i++)
+            {
+                binario.Add(Convert.ToInt32(texto[i]));
+            }
+           
+            binario.Reverse();
+
+            resultado = cv.binarioDecimal(binario);
+
+            return resultado;
+        }
+
+        #endregion
     }
 }

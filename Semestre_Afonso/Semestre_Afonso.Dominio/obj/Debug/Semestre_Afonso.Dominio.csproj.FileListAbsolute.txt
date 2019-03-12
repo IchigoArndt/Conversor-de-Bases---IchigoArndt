@@ -4,3 +4,9 @@ C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Se
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.dll
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.pdb
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\bin\Debug\Semestre_Afonso.Dominio.dll
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\bin\Debug\Semestre_Afonso.Dominio.pdb
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.dll
+C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Dominio\obj\Debug\Semestre_Afonso.Dominio.pdb

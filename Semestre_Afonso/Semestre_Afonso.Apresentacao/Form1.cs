@@ -30,6 +30,7 @@ namespace Semestre_Afonso.Apresentacao
             cmb_conversao.Items.Add("Decimal para Binário");
             cmb_conversao.Items.Add("Decimal para Octal");
             cmb_conversao.Items.Add("Decimal para Hexadecimal");
+            cmb_conversao.Items.Add("Binario para Decimal");
         }
 
         private void carregaBarra(string result)
@@ -70,11 +71,13 @@ namespace Semestre_Afonso.Apresentacao
 
                 string numeroConversao = txt_BaseO.Text;
 
-                string resultado = sv.realizaConversao(baseSelecionada, numeroConversao);
+                MessageBox.Show(sv.baseDecimal(numeroConversao, baseSelecionada));
 
-                carregaBarra(resultado);
+                //string resultado = sv.realizaConversao(baseSelecionada, numeroConversao);
 
-                txt_BaseN.Text = resultado;
+                //carregaBarra(resultado);
+
+                //txt_BaseN.Text = resultado;
 
             }else
             {
@@ -83,5 +86,9 @@ namespace Semestre_Afonso.Apresentacao
             }  
         }
 
+        private void txt_BaseO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

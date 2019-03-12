@@ -32,7 +32,7 @@ namespace Semestre_Afonso.Dominio
 //Valida se o texto informado pelo usario tem o tamanho estaelecido (min e max)
         private bool TamanhoNumerico(string texto)
         {
-            if (texto.Length <= 6 && texto.Length >= 3)
+            if (texto.Length <= 999 && texto.Length >= 1)
                 return true;
             else
                 return false;

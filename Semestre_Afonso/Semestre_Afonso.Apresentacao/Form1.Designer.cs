@@ -63,6 +63,7 @@
             this.txt_BaseO.Name = "txt_BaseO";
             this.txt_BaseO.Size = new System.Drawing.Size(294, 133);
             this.txt_BaseO.TabIndex = 2;
+            this.txt_BaseO.TextChanged += new System.EventHandler(this.txt_BaseO_TextChanged);
             // 
             // btn_conversao
             // 
