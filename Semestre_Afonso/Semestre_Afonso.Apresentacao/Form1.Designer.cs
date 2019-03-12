@@ -28,81 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cmb_conversao = new System.Windows.Forms.ComboBox();
             this.lbl_Conversao = new System.Windows.Forms.Label();
             this.txt_BaseO = new System.Windows.Forms.TextBox();
-            this.btn_conversao = new System.Windows.Forms.Button();
             this.txt_BaseN = new System.Windows.Forms.TextBox();
-            this.pb = new System.Windows.Forms.ProgressBar();
+            this.ultTxtButton = new Infragistics.Win.Misc.UltraButton();
+            this.progressoConversao = new Infragistics.Win.UltraWinProgressBar.UltraProgressBar();
             this.SuspendLayout();
             // 
             // cmb_conversao
             // 
             this.cmb_conversao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_conversao.FormattingEnabled = true;
-            this.cmb_conversao.Location = new System.Drawing.Point(15, 37);
+            this.cmb_conversao.Location = new System.Drawing.Point(20, 46);
+            this.cmb_conversao.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_conversao.Name = "cmb_conversao";
-            this.cmb_conversao.Size = new System.Drawing.Size(294, 21);
+            this.cmb_conversao.Size = new System.Drawing.Size(390, 24);
             this.cmb_conversao.TabIndex = 0;
             this.cmb_conversao.SelectedIndexChanged += new System.EventHandler(this.cmb_conversao_SelectedIndexChanged);
             // 
             // lbl_Conversao
             // 
             this.lbl_Conversao.AutoSize = true;
-            this.lbl_Conversao.Location = new System.Drawing.Point(12, 9);
+            this.lbl_Conversao.Location = new System.Drawing.Point(16, 11);
+            this.lbl_Conversao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Conversao.Name = "lbl_Conversao";
-            this.lbl_Conversao.Size = new System.Drawing.Size(107, 13);
+            this.lbl_Conversao.Size = new System.Drawing.Size(135, 16);
             this.lbl_Conversao.TabIndex = 1;
             this.lbl_Conversao.Text = "Escolha a conversão";
             this.lbl_Conversao.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_BaseO
             // 
-            this.txt_BaseO.Location = new System.Drawing.Point(15, 82);
+            this.txt_BaseO.Location = new System.Drawing.Point(24, 101);
+            this.txt_BaseO.Margin = new System.Windows.Forms.Padding(4);
             this.txt_BaseO.Multiline = true;
             this.txt_BaseO.Name = "txt_BaseO";
-            this.txt_BaseO.Size = new System.Drawing.Size(294, 133);
+            this.txt_BaseO.Size = new System.Drawing.Size(390, 162);
             this.txt_BaseO.TabIndex = 2;
-            this.txt_BaseO.TextChanged += new System.EventHandler(this.txt_BaseO_TextChanged);
-            // 
-            // btn_conversao
-            // 
-            this.btn_conversao.Location = new System.Drawing.Point(117, 221);
-            this.btn_conversao.Name = "btn_conversao";
-            this.btn_conversao.Size = new System.Drawing.Size(75, 23);
-            this.btn_conversao.TabIndex = 4;
-            this.btn_conversao.Text = "Converter";
-            this.btn_conversao.UseVisualStyleBackColor = true;
-            this.btn_conversao.Click += new System.EventHandler(this.btn_conversao_Click);
+            this.txt_BaseO.Leave += new System.EventHandler(this.txt_BaseO_Leave);
             // 
             // txt_BaseN
             // 
-            this.txt_BaseN.Location = new System.Drawing.Point(15, 290);
+            this.txt_BaseN.Location = new System.Drawing.Point(20, 357);
+            this.txt_BaseN.Margin = new System.Windows.Forms.Padding(4);
             this.txt_BaseN.Multiline = true;
             this.txt_BaseN.Name = "txt_BaseN";
-            this.txt_BaseN.Size = new System.Drawing.Size(294, 133);
+            this.txt_BaseN.ReadOnly = true;
+            this.txt_BaseN.Size = new System.Drawing.Size(390, 162);
             this.txt_BaseN.TabIndex = 3;
             // 
-            // pb
+            // ultTxtButton
             // 
-            this.pb.Location = new System.Drawing.Point(32, 255);
-            this.pb.Name = "pb";
-            this.pb.Size = new System.Drawing.Size(262, 23);
-            this.pb.TabIndex = 5;
+            appearance1.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
+            appearance1.BorderColor = System.Drawing.Color.Red;
+            this.ultTxtButton.HotTrackAppearance = appearance1;
+            this.ultTxtButton.Location = new System.Drawing.Point(148, 270);
+            this.ultTxtButton.Name = "ultTxtButton";
+            appearance2.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
+            appearance2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ultTxtButton.PressedAppearance = appearance2;
+            this.ultTxtButton.Size = new System.Drawing.Size(100, 28);
+            this.ultTxtButton.TabIndex = 6;
+            this.ultTxtButton.Text = "Converter";
+            this.ultTxtButton.Click += new System.EventHandler(this.ultraButton1_Click);
+            // 
+            // progressoConversao
+            // 
+            this.progressoConversao.Location = new System.Drawing.Point(40, 318);
+            this.progressoConversao.Name = "progressoConversao";
+            this.progressoConversao.Size = new System.Drawing.Size(350, 23);
+            this.progressoConversao.TabIndex = 7;
+            this.progressoConversao.Text = "[Formatted]";
+            this.progressoConversao.ValueChanged += new System.EventHandler(this.progressoConversao_ValueChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 450);
-            this.Controls.Add(this.pb);
-            this.Controls.Add(this.btn_conversao);
+            this.ClientSize = new System.Drawing.Size(426, 554);
+            this.Controls.Add(this.progressoConversao);
+            this.Controls.Add(this.ultTxtButton);
             this.Controls.Add(this.txt_BaseN);
             this.Controls.Add(this.txt_BaseO);
             this.Controls.Add(this.lbl_Conversao);
             this.Controls.Add(this.cmb_conversao);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tela de Conversão";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,9 +133,9 @@
         private System.Windows.Forms.ComboBox cmb_conversao;
         private System.Windows.Forms.Label lbl_Conversao;
         private System.Windows.Forms.TextBox txt_BaseO;
-        private System.Windows.Forms.Button btn_conversao;
         private System.Windows.Forms.TextBox txt_BaseN;
-        private System.Windows.Forms.ProgressBar pb;
+        private Infragistics.Win.Misc.UltraButton ultTxtButton;
+        private Infragistics.Win.UltraWinProgressBar.UltraProgressBar progressoConversao;
     }
 }
 

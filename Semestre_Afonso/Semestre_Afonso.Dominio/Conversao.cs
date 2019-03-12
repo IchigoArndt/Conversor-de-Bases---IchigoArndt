@@ -8,7 +8,12 @@ namespace Semestre_Afonso.Dominio
 {
    public class Conversao
     {
-        #region de Decimal para todas as outras bases
+        #region Bases
+        private  int  Binario = 2;
+        private  int  Hexadecimal = 16;
+        private  int  Octal = 8;
+        #endregion
+
         //Metodo que faz a conversão de decimal, para octal,binario e hexadecimal
         public List<int> conversao(int numero , int baseNumerica)
         {
@@ -38,14 +43,40 @@ namespace Semestre_Afonso.Dominio
         //Metodo que faz a conversão de letra em numero
         public string conversaoASCII(string texto, int baseNumerica)
         {
+           
             byte[] codigosAscii = System.Text.Encoding.ASCII.GetBytes(texto);
 
             int numeroLetra = 0;
+            string resultado = string.Empty;
 
             for (int i = 0; i < codigosAscii.Length; ++i)
                 numeroLetra += Convert.ToInt32(codigosAscii[i]);
 
-            return numeroLetra.ToString();
+            switch (baseNumerica)
+            {
+                case 0:
+                    {
+                        resultado = resultadoConversao(conversao(numeroLetra, Binario));
+                        break;
+                    }
+                case -1:
+                    {
+                        resultado = resultadoConversao(conversao(numeroLetra, Octal));
+                        break;
+                    }
+                case -2:
+                    {
+                        resultado = resultadoConversaoHexa(conversao(numeroLetra, Hexadecimal));
+                        break;
+                    }
+                case -3:
+                    {
+                        resultado = numeroLetra.ToString();
+                        break;
+                    }
+            }
+
+            return resultado.ToString();
         }
         //Retorna o resultado das conversões de decimal para binario e de decimal para octal
         public string resultadoConversao(List<int> conversao)
@@ -104,35 +135,30 @@ namespace Semestre_Afonso.Dominio
 
             return resultado;
         }
-        #endregion
-
-        #region de Todas as bases para decimal
-        public string binarioDecimal(List<int>binario)
+        //Converte e retorna a conversão de Binário para Decimal
+        public string resultadoConversaoBinarioDecimal(List<int>binario)
         {
-            List<int> calculoElevados = new List<int>();
-            List<int> multiReal = new List<int>();
+            List<int> resultadoExpo = new List<int>();
+            List<int> resultadoMulti = new List<int>();
+            int soma = 0;
+            string resultado = string.Empty;
 
-            double aux = 0;
-            int auxInt = 0;
-            int resultado = 0;
-
-            foreach (var item in binario)
+            for (int i = 1; i <= binario.Count; i++)
             {
-                aux = Convert.ToDouble(item);
-                auxInt = Convert.ToInt32(Math.Pow(aux, 2));
-                calculoElevados.Add(auxInt);
-            }
-            for (int i=0;i<calculoElevados.Count;i++)
-            {
-                multiReal.Add(calculoElevados[i] * binario[i]);
-            }
-            foreach (var item in multiReal)
-            {
-                resultado += item;
+                resultadoExpo.Add(Convert.ToInt32(Math.Pow(2,i)));
             }
 
-            return resultado.ToString();
+            for (int i = 0; i < resultadoExpo.Count; i++)
+            {
+                resultadoMulti.Add(resultadoExpo[i] * binario[i]);
+            }
+
+            foreach (var item in resultadoMulti)
+            {
+                soma += item;
+            }
+            resultado = soma.ToString();
+            return resultado;
         }
-        #endregion
     }
 }

@@ -7,12 +7,12 @@ C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csproj.CopyComplete
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.dll
 C:\Users\Luiz Arndt\Desktop\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.pdb
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Aplicacao.dll
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Aplicacao.pdb
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Dominio.dll
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Dominio.pdb
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csprojResolveAssemblyReference.cache
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csproj.CoreCompileInputs.cache
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csproj.CopyComplete
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.dll
-C:\Users\Luiz Arndt\Desktop\NDD\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.pdb
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Aplicacao.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Aplicacao.pdb
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Dominio.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\bin\Debug\Semestre_Afonso.Dominio.pdb
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csprojAssemblyReference.cache
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.csproj.CopyComplete
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Aplicacao\obj\Debug\Semestre_Afonso.Aplicacao.pdb

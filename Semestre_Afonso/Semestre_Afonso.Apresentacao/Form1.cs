@@ -28,26 +28,34 @@ namespace Semestre_Afonso.Apresentacao
         private void carregaLista()
         {
             cmb_conversao.Items.Add("Decimal para Binário");
+            cmb_conversao.Items.Add("Binario para Decimal");
             cmb_conversao.Items.Add("Decimal para Octal");
             cmb_conversao.Items.Add("Decimal para Hexadecimal");
-            cmb_conversao.Items.Add("Binario para Decimal");
+            //Conversões de Texto
+            cmb_conversao.Items.Add("Texto para Binario");
+            cmb_conversao.Items.Add("Texto para Octal");
+            cmb_conversao.Items.Add("Texto para Hexadecimal");
+            cmb_conversao.Items.Add("Texto para Decimal");
         }
 
         private void carregaBarra(string result)
         {
             int porcetagem = 100 / result.Length;
 
-            pb.Step = porcetagem;
+            progressoConversao.Step = porcetagem;
 
-            pb.Value = 0;
+            progressoConversao.Value = 0;
 
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i <= result.Length; i++)
             {
-                pb.PerformStep();
-                pb.Update();
+                progressoConversao.PerformStep();
+                progressoConversao.Update();
                 Thread.Sleep(2);
             }
-
+            if (progressoConversao.Step != 100)
+            {
+                progressoConversao.Step = 100;
+            }
             MessageBox.Show("Conversão Realizada ");
         }
 
@@ -59,34 +67,70 @@ namespace Semestre_Afonso.Apresentacao
         private void cmb_conversao_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_BaseO.Enabled = true;
+            txt_BaseN.Enabled = true;
+        }
+       
+        private void txt_BaseO_Leave(object sender, EventArgs e)
+        {
+            ultraButton1_Click(sender,e);
         }
 
-        private void btn_conversao_Click(object sender, EventArgs e)
+        private void ultraButton1_Click(object sender, EventArgs e)
         {
             Servico sv = new Servico();
-            if (sv.validacao(txt_BaseO.Text))
+            Validacao validacao = new Validacao();
+
+            int baseConversaoSelecionada = sv.BaseNumerica(cmb_conversao.SelectedItem.ToString());
+            string numeroConversao = txt_BaseO.Text;
+            if (validacao.Validacaos(numeroConversao.ToList()) || baseConversaoSelecionada >= -3 && baseConversaoSelecionada <= 0)
             {
-                
-                string baseSelecionada = cmb_conversao.SelectedItem.ToString();
-
-                string numeroConversao = txt_BaseO.Text;
-
-                MessageBox.Show(sv.baseDecimal(numeroConversao, baseSelecionada));
-
-                //string resultado = sv.realizaConversao(baseSelecionada, numeroConversao);
-
-                //carregaBarra(resultado);
-
-                //txt_BaseN.Text = resultado;
-
-            }else
+                string resultado = string.Empty;
+                if (baseConversaoSelecionada == 2 || baseConversaoSelecionada == 8 || baseConversaoSelecionada == 16)
+                {
+                    resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                }
+                else
+                {
+                    switch (baseConversaoSelecionada)
+                    {
+                        case 4:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, sv.ConversaoLista(numeroConversao), null);
+                                break;
+                            }
+                        case 0:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                        case -1:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                        case -2:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                        case -3:
+                            {
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
+                                break;
+                            }
+                    }
+                }
+                carregaBarra(resultado);
+                txt_BaseN.Text = resultado;
+            }
+            else
             {
-                txt_BaseO.Text = "";
-                MessageBox.Show("Por favor Verifique o tamanho do numero informado \n Verfique se foi usado apenas letras");
-            }  
+                MessageBox.Show("Valor do campo inválido!" + "\n" + "Por favor digite somente numeros" + "\n" + "Ou escolha a conversão de texto");
+                txt_BaseO.Text = string.Empty;
+            }
         }
 
-        private void txt_BaseO_TextChanged(object sender, EventArgs e)
+        private void progressoConversao_ValueChanged(object sender, EventArgs e)
         {
 
         }

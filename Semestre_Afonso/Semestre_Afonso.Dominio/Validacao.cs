@@ -10,11 +10,11 @@ namespace Semestre_Afonso.Dominio
     public class Validacao
     {
 
-        public bool Validacaos(string texto)
+        public bool Validacaos(List<char>texto)
         {
             bool result = false;
 
-            if(!string.IsNullOrEmpty(ApenasNumeros(texto)) && TamanhoNumerico(texto))
+            if(!string.IsNullOrEmpty(ApenasNumeros(texto)))
             {
                 result = true;
             }
@@ -22,21 +22,19 @@ namespace Semestre_Afonso.Dominio
             return result;
         }
 //Valida se o texto informado pelo usario é somente Números
-        private string ApenasNumeros(string texto)
+        private string ApenasNumeros(List<char> texto)
         {
             string resultString = string.Empty;
             Regex regexObj = new Regex(@"[^\d]");
-            resultString = regexObj.Replace(texto, "");
+            for (int i = 0; i < texto.Count; i++)
+            {
+                resultString = regexObj.Replace(texto[i].ToString(), "");
+                if(resultString.Equals(""))
+                {
+                    break;
+                }
+            }
             return resultString;
         }
-//Valida se o texto informado pelo usario tem o tamanho estaelecido (min e max)
-        private bool TamanhoNumerico(string texto)
-        {
-            if (texto.Length <= 999 && texto.Length >= 1)
-                return true;
-            else
-                return false;
-        }
-
     }
 }
