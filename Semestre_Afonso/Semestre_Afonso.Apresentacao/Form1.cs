@@ -42,19 +42,19 @@ namespace Semestre_Afonso.Apresentacao
         {
             int porcetagem = 100 / result.Length;
 
-            pb.Step = porcetagem;
+            progressoConversao.Step = porcetagem;
 
-            pb.Value = 0;
+            progressoConversao.Value = 0;
 
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i <= result.Length; i++)
             {
-                pb.PerformStep();
-                pb.Update();
+                progressoConversao.PerformStep();
+                progressoConversao.Update();
                 Thread.Sleep(2);
             }
-            if (pb.Step != 100)
+            if (progressoConversao.Step != 100)
             {
-                pb.Step = 100;
+                progressoConversao.Step = 100;
             }
             MessageBox.Show("Conversão Realizada ");
         }
@@ -128,6 +128,11 @@ namespace Semestre_Afonso.Apresentacao
                 MessageBox.Show("Valor do campo inválido!" + "\n" + "Por favor digite somente numeros" + "\n" + "Ou escolha a conversão de texto");
                 txt_BaseO.Text = string.Empty;
             }
+        }
+
+        private void progressoConversao_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

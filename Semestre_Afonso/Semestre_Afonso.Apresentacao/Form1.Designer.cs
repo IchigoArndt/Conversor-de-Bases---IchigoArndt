@@ -35,8 +35,8 @@
             this.lbl_Conversao = new System.Windows.Forms.Label();
             this.txt_BaseO = new System.Windows.Forms.TextBox();
             this.txt_BaseN = new System.Windows.Forms.TextBox();
-            this.pb = new System.Windows.Forms.ProgressBar();
             this.ultTxtButton = new Infragistics.Win.Misc.UltraButton();
+            this.progressoConversao = new Infragistics.Win.UltraWinProgressBar.UltraProgressBar();
             this.SuspendLayout();
             // 
             // cmb_conversao
@@ -81,14 +81,6 @@
             this.txt_BaseN.Size = new System.Drawing.Size(390, 162);
             this.txt_BaseN.TabIndex = 3;
             // 
-            // pb
-            // 
-            this.pb.Location = new System.Drawing.Point(40, 314);
-            this.pb.Margin = new System.Windows.Forms.Padding(4);
-            this.pb.Name = "pb";
-            this.pb.Size = new System.Drawing.Size(350, 28);
-            this.pb.TabIndex = 5;
-            // 
             // ultTxtButton
             // 
             appearance1.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
@@ -104,13 +96,22 @@
             this.ultTxtButton.Text = "Converter";
             this.ultTxtButton.Click += new System.EventHandler(this.ultraButton1_Click);
             // 
+            // progressoConversao
+            // 
+            this.progressoConversao.Location = new System.Drawing.Point(40, 318);
+            this.progressoConversao.Name = "progressoConversao";
+            this.progressoConversao.Size = new System.Drawing.Size(350, 23);
+            this.progressoConversao.TabIndex = 7;
+            this.progressoConversao.Text = "[Formatted]";
+            this.progressoConversao.ValueChanged += new System.EventHandler(this.progressoConversao_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 554);
+            this.Controls.Add(this.progressoConversao);
             this.Controls.Add(this.ultTxtButton);
-            this.Controls.Add(this.pb);
             this.Controls.Add(this.txt_BaseN);
             this.Controls.Add(this.txt_BaseO);
             this.Controls.Add(this.lbl_Conversao);
@@ -133,8 +134,8 @@
         private System.Windows.Forms.Label lbl_Conversao;
         private System.Windows.Forms.TextBox txt_BaseO;
         private System.Windows.Forms.TextBox txt_BaseN;
-        private System.Windows.Forms.ProgressBar pb;
         private Infragistics.Win.Misc.UltraButton ultTxtButton;
+        private Infragistics.Win.UltraWinProgressBar.UltraProgressBar progressoConversao;
     }
 }
 
