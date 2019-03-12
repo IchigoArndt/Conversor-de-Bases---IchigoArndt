@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cmb_conversao = new System.Windows.Forms.ComboBox();
             this.lbl_Conversao = new System.Windows.Forms.Label();
             this.txt_BaseO = new System.Windows.Forms.TextBox();
-            this.btn_conversao = new System.Windows.Forms.Button();
             this.txt_BaseN = new System.Windows.Forms.TextBox();
             this.pb = new System.Windows.Forms.ProgressBar();
+            this.ultTxtButton = new Infragistics.Win.Misc.UltraButton();
             this.SuspendLayout();
             // 
             // cmb_conversao
@@ -42,7 +44,7 @@
             this.cmb_conversao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_conversao.FormattingEnabled = true;
             this.cmb_conversao.Location = new System.Drawing.Point(20, 46);
-            this.cmb_conversao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_conversao.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_conversao.Name = "cmb_conversao";
             this.cmb_conversao.Size = new System.Drawing.Size(390, 24);
             this.cmb_conversao.TabIndex = 0;
@@ -61,29 +63,18 @@
             // 
             // txt_BaseO
             // 
-            this.txt_BaseO.Location = new System.Drawing.Point(20, 101);
-            this.txt_BaseO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_BaseO.Location = new System.Drawing.Point(24, 101);
+            this.txt_BaseO.Margin = new System.Windows.Forms.Padding(4);
             this.txt_BaseO.Multiline = true;
             this.txt_BaseO.Name = "txt_BaseO";
             this.txt_BaseO.Size = new System.Drawing.Size(390, 162);
             this.txt_BaseO.TabIndex = 2;
             this.txt_BaseO.Leave += new System.EventHandler(this.txt_BaseO_Leave);
             // 
-            // btn_conversao
-            // 
-            this.btn_conversao.Location = new System.Drawing.Point(156, 272);
-            this.btn_conversao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_conversao.Name = "btn_conversao";
-            this.btn_conversao.Size = new System.Drawing.Size(100, 28);
-            this.btn_conversao.TabIndex = 4;
-            this.btn_conversao.Text = "Converter";
-            this.btn_conversao.UseVisualStyleBackColor = true;
-            this.btn_conversao.Click += new System.EventHandler(this.btn_conversao_Click);
-            // 
             // txt_BaseN
             // 
             this.txt_BaseN.Location = new System.Drawing.Point(20, 357);
-            this.txt_BaseN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_BaseN.Margin = new System.Windows.Forms.Padding(4);
             this.txt_BaseN.Multiline = true;
             this.txt_BaseN.Name = "txt_BaseN";
             this.txt_BaseN.ReadOnly = true;
@@ -92,19 +83,34 @@
             // 
             // pb
             // 
-            this.pb.Location = new System.Drawing.Point(42, 314);
-            this.pb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb.Location = new System.Drawing.Point(40, 314);
+            this.pb.Margin = new System.Windows.Forms.Padding(4);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(350, 28);
             this.pb.TabIndex = 5;
+            // 
+            // ultTxtButton
+            // 
+            appearance1.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
+            appearance1.BorderColor = System.Drawing.Color.Red;
+            this.ultTxtButton.HotTrackAppearance = appearance1;
+            this.ultTxtButton.Location = new System.Drawing.Point(148, 270);
+            this.ultTxtButton.Name = "ultTxtButton";
+            appearance2.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
+            appearance2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ultTxtButton.PressedAppearance = appearance2;
+            this.ultTxtButton.Size = new System.Drawing.Size(100, 28);
+            this.ultTxtButton.TabIndex = 6;
+            this.ultTxtButton.Text = "Converter";
+            this.ultTxtButton.Click += new System.EventHandler(this.ultraButton1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 554);
+            this.Controls.Add(this.ultTxtButton);
             this.Controls.Add(this.pb);
-            this.Controls.Add(this.btn_conversao);
             this.Controls.Add(this.txt_BaseN);
             this.Controls.Add(this.txt_BaseO);
             this.Controls.Add(this.lbl_Conversao);
@@ -112,7 +118,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Conversão";
@@ -126,9 +132,9 @@
         private System.Windows.Forms.ComboBox cmb_conversao;
         private System.Windows.Forms.Label lbl_Conversao;
         private System.Windows.Forms.TextBox txt_BaseO;
-        private System.Windows.Forms.Button btn_conversao;
         private System.Windows.Forms.TextBox txt_BaseN;
         private System.Windows.Forms.ProgressBar pb;
+        private Infragistics.Win.Misc.UltraButton ultTxtButton;
     }
 }
 

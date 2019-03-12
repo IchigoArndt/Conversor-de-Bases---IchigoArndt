@@ -4,10 +4,6 @@ Conversor entre bases
 Disciplina:
 Calculo Numerico Simbolico
 
-Professor: Afonso
-
-Instituição: Centro Universitario Unifacvest
-
 Desenvolvedor:
 IchigoArndt
 

@@ -69,8 +69,13 @@ namespace Semestre_Afonso.Apresentacao
             txt_BaseO.Enabled = true;
             txt_BaseN.Enabled = true;
         }
+       
+        private void txt_BaseO_Leave(object sender, EventArgs e)
+        {
+            ultraButton1_Click(sender,e);
+        }
 
-        private void btn_conversao_Click(object sender, EventArgs e)
+        private void ultraButton1_Click(object sender, EventArgs e)
         {
             Servico sv = new Servico();
             Validacao validacao = new Validacao();
@@ -95,7 +100,7 @@ namespace Semestre_Afonso.Apresentacao
                             }
                         case 0:
                             {
-                                resultado = sv.organizaConversao(baseConversaoSelecionada,null,numeroConversao);
+                                resultado = sv.organizaConversao(baseConversaoSelecionada, null, numeroConversao);
                                 break;
                             }
                         case -1:
@@ -123,11 +128,6 @@ namespace Semestre_Afonso.Apresentacao
                 MessageBox.Show("Valor do campo inválido!" + "\n" + "Por favor digite somente numeros" + "\n" + "Ou escolha a conversão de texto");
                 txt_BaseO.Text = string.Empty;
             }
-        }
-               
-        private void txt_BaseO_Leave(object sender, EventArgs e)
-        {
-            btn_conversao_Click(sender,e);
         }
     }
 }

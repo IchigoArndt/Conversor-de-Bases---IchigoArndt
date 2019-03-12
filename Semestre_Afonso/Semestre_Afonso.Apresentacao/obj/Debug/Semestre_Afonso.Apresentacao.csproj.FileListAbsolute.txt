@@ -28,3 +28,12 @@ C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Ap
 C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.csproj.CopyComplete
 C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.exe
 C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.pdb
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\obj\Debug\Semestre_Afonso.Apresentacao.exe.licenses
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Shared.v15.1.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.v15.1.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Shared.v15.1.xml
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.1.xml
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.v15.1.xml
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.Misc.v15.1.dll
+C:\Worksapce\Conversor-de-Bases---IchigoArndt\Semestre_Afonso\Semestre_Afonso.Apresentacao\bin\Debug\Infragistics4.Win.Misc.v15.1.xml
