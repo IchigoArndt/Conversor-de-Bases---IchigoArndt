@@ -30,13 +30,15 @@
         {
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.cmb_conversao = new System.Windows.Forms.ComboBox();
             this.lbl_Conversao = new System.Windows.Forms.Label();
-            this.txt_BaseO = new System.Windows.Forms.TextBox();
             this.txt_BaseN = new System.Windows.Forms.TextBox();
             this.ultTxtButton = new Infragistics.Win.Misc.UltraButton();
             this.progressoConversao = new Infragistics.Win.UltraWinProgressBar.UltraProgressBar();
+            this.txtBase_O = new Infragistics.Win.FormattedLinkLabel.UltraFormattedTextEditor();
             this.SuspendLayout();
             // 
             // cmb_conversao
@@ -61,16 +63,6 @@
             this.lbl_Conversao.Text = "Escolha a conversão";
             this.lbl_Conversao.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txt_BaseO
-            // 
-            this.txt_BaseO.Location = new System.Drawing.Point(24, 101);
-            this.txt_BaseO.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_BaseO.Multiline = true;
-            this.txt_BaseO.Name = "txt_BaseO";
-            this.txt_BaseO.Size = new System.Drawing.Size(390, 162);
-            this.txt_BaseO.TabIndex = 2;
-            this.txt_BaseO.Leave += new System.EventHandler(this.txt_BaseO_Leave);
-            // 
             // txt_BaseN
             // 
             this.txt_BaseN.Location = new System.Drawing.Point(20, 357);
@@ -86,7 +78,7 @@
             appearance1.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
             appearance1.BorderColor = System.Drawing.Color.Red;
             this.ultTxtButton.HotTrackAppearance = appearance1;
-            this.ultTxtButton.Location = new System.Drawing.Point(148, 270);
+            this.ultTxtButton.Location = new System.Drawing.Point(160, 270);
             this.ultTxtButton.Name = "ultTxtButton";
             appearance2.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
             appearance2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -98,6 +90,10 @@
             // 
             // progressoConversao
             // 
+            appearance3.BackColor = System.Drawing.Color.Red;
+            appearance3.BorderColor = System.Drawing.Color.Black;
+            appearance3.ForeColor = System.Drawing.Color.White;
+            this.progressoConversao.FillAppearance = appearance3;
             this.progressoConversao.Location = new System.Drawing.Point(40, 318);
             this.progressoConversao.Name = "progressoConversao";
             this.progressoConversao.Size = new System.Drawing.Size(350, 23);
@@ -105,15 +101,32 @@
             this.progressoConversao.Text = "[Formatted]";
             this.progressoConversao.ValueChanged += new System.EventHandler(this.progressoConversao_ValueChanged);
             // 
+            // txtBase_O
+            // 
+            this.txtBase_O.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.txtBase_O.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Office2013;
+            appearance4.BorderAlpha = Infragistics.Win.Alpha.UseAlphaLevel;
+            appearance4.BorderColor = System.Drawing.Color.Blue;
+            appearance4.BorderColor2 = System.Drawing.Color.Cyan;
+            appearance4.BorderColor3DBase = System.Drawing.Color.Red;
+            appearance4.TextHAlignAsString = "Left";
+            this.txtBase_O.HotTrackLinkAppearance = appearance4;
+            this.txtBase_O.Location = new System.Drawing.Point(20, 94);
+            this.txtBase_O.Name = "txtBase_O";
+            this.txtBase_O.Size = new System.Drawing.Size(390, 162);
+            this.txtBase_O.TabIndex = 8;
+            this.txtBase_O.Value = "";
+            this.txtBase_O.Leave += new System.EventHandler(this.ultraButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 554);
+            this.Controls.Add(this.txtBase_O);
             this.Controls.Add(this.progressoConversao);
             this.Controls.Add(this.ultTxtButton);
             this.Controls.Add(this.txt_BaseN);
-            this.Controls.Add(this.txt_BaseO);
             this.Controls.Add(this.lbl_Conversao);
             this.Controls.Add(this.cmb_conversao);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
@@ -132,10 +145,10 @@
 
         private System.Windows.Forms.ComboBox cmb_conversao;
         private System.Windows.Forms.Label lbl_Conversao;
-        private System.Windows.Forms.TextBox txt_BaseO;
         private System.Windows.Forms.TextBox txt_BaseN;
         private Infragistics.Win.Misc.UltraButton ultTxtButton;
         private Infragistics.Win.UltraWinProgressBar.UltraProgressBar progressoConversao;
+        private Infragistics.Win.FormattedLinkLabel.UltraFormattedTextEditor txtBase_O;
     }
 }
 

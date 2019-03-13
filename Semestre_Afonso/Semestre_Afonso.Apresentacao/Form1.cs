@@ -1,4 +1,7 @@
-﻿using Semestre_Afonso.Aplicacao;
+﻿using Infragistics.Win;
+using Infragistics.Win.UltraMessageBox;
+using Semestre_Afonso.Aplicacao;
+using Semestre_Afonso.Apresentacao.Util;
 using Semestre_Afonso.Dominio;
 using System;
 using System.Collections.Generic;
@@ -20,7 +23,7 @@ namespace Semestre_Afonso.Apresentacao
         {
             InitializeComponent();
             carregaLista();
-            txt_BaseO.Enabled = false;
+            txtBase_O.Enabled = false;
             txt_BaseN.Enabled = false;
 
         }
@@ -45,7 +48,15 @@ namespace Semestre_Afonso.Apresentacao
             progressoConversao.Step = porcetagem;
 
             progressoConversao.Value = 0;
+            #region Aparencia
+            progressoConversao.UseOsThemes = DefaultableBoolean.False;
 
+            progressoConversao.Appearance.BackColor = Color.Black;
+
+            progressoConversao.FillAppearance.BackColor = Color.Red;
+
+            progressoConversao.FillAppearance.ForeColor = Color.Black;
+            #endregion
             for (int i = 0; i <= result.Length; i++)
             {
                 progressoConversao.PerformStep();
@@ -66,7 +77,7 @@ namespace Semestre_Afonso.Apresentacao
 
         private void cmb_conversao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_BaseO.Enabled = true;
+            txtBase_O.Enabled = true;
             txt_BaseN.Enabled = true;
         }
        
@@ -81,7 +92,7 @@ namespace Semestre_Afonso.Apresentacao
             Validacao validacao = new Validacao();
 
             int baseConversaoSelecionada = sv.BaseNumerica(cmb_conversao.SelectedItem.ToString());
-            string numeroConversao = txt_BaseO.Text;
+            string numeroConversao = txtBase_O.Text;
             if (validacao.Validacaos(numeroConversao.ToList()) || baseConversaoSelecionada >= -3 && baseConversaoSelecionada <= 0)
             {
                 string resultado = string.Empty;
@@ -125,12 +136,27 @@ namespace Semestre_Afonso.Apresentacao
             }
             else
             {
-                MessageBox.Show("Valor do campo inválido!" + "\n" + "Por favor digite somente numeros" + "\n" + "Ou escolha a conversão de texto");
-                txt_BaseO.Text = string.Empty;
+                string mensagemErro = "Valor do campo inválido!" + "<br/>" + "Por favor digite somente numeros" + "<br/>" + "Ou escolha a conversão de texto";
+                mostrarMensagemAlerta(cssBotoes.cssBotaoErro(mensagemErro));
+                txtBase_O.Text = string.Empty;
             }
         }
 
+        private void mostrarMensagemAlerta(UltraMessageBoxInfo definicao)
+        {
+            #region Css do botão de alerta 
+            UltraMessageBoxManager executorMensagem = new UltraMessageBoxManager();
+            executorMensagem.ButtonAlignment = HAlign.Center;
+            executorMensagem.ShowMessageBox(definicao);
+            #endregion
+        }
+
         private void progressoConversao_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ultraCalculator1_AfterCalculationComplete(object sender, EventArgs e)
         {
 
         }

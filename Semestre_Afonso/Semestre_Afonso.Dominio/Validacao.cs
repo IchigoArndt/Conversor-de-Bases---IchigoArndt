@@ -31,6 +31,7 @@ namespace Semestre_Afonso.Dominio
                 resultString = regexObj.Replace(texto[i].ToString(), "");
                 if(resultString.Equals(""))
                 {
+                    resultString = null;
                     break;
                 }
             }
